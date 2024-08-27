@@ -1,7 +1,7 @@
 # Remind me of some useful commands
 
 Tools might be used:
-- [SAMtools](https://www.htslib.org/doc/samtools-depth.html)
+- [Samtools](https://www.htslib.org/doc/samtools-depth.html)
 
 
 ## :hamster: Calculate sequencing depth of bam file
