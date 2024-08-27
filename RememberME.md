@@ -40,4 +40,4 @@ Emojis before each sub-section are planned to be arranged in the following order
 
 :hamster: -> :cow: -> :tiger: -> :rabbit: -> :dragon_face: -> :snake:	-> :horse: -> :sheep: -> :monkey_face: -> :baby_chick: -> :dog: -> :pig: ->
 
-which represents [Chinese zodiac](https://en.wikipedia.org/wiki/Chinese_zodiac) in a repeating twelve-year cycle. You can use [Chinese Zodiac Calculator](https://www.travelchinaguide.com/intro/social_customs/zodiac/) to find your lucky animal!
+which represents [Chinese zodiac](https://en.wikipedia.org/wiki/Chinese_zodiac) in a repeating twelve-year cycle. It can also be fun to use [Chinese Zodiac Calculator](https://www.travelchinaguide.com/intro/social_customs/zodiac/) to find your lucky animal!
