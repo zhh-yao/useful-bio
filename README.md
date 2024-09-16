@@ -30,8 +30,16 @@ sed "s/old/new/" header.sam > header_new.sam
 samtools reheader header_new.sam file.bam
 ```
 
-## :tiger: 
+## :tiger: Reheader files with no prefix 'chr'
+If you want to rename header without prefix 'chr'
+```shell
+cat ref.fa | sed 's/>chr/>/g' > ref_noPrefix.fa
+cat name.bed sed 's/^chr//' > name_noPrefix.bed
+samtools view -h name.bam | sed 's/chr//g' | samtools view -Shb - -o name_noPrefix.bam
+```
+Reference or more details: [biostars](https://www.biostars.org/p/119295/#119462).
 
+## :rabbit: 
 
 
 ## Trivia
