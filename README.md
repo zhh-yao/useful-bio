@@ -16,6 +16,7 @@ Sequencing depth of covered regions
 samtools depth -a file.bam | awk '{sum+=$3} END { print "Average = ",sum/NR}'
 ```
 
+
 ## :cow: Edit header of bam file
 
 Change `old` string to `new` 
@@ -30,14 +31,24 @@ sed "s/old/new/" header.sam > header_new.sam
 samtools reheader header_new.sam file.bam
 ```
 
-## :tiger: Reheader files with no prefix 'chr'
+
+## :tiger: Edit files about prefix 'chr'
 If you want to rename header without prefix 'chr'
 ```shell
 cat ref.fa | sed 's/>chr/>/g' > ref_noPrefix.fa
 cat name.bed sed 's/^chr//' > name_noPrefix.bed
 samtools view -h name.bam | sed 's/chr//g' | samtools view -Shb - -o name_noPrefix.bam
 ```
-Reference or more details: [biostars](https://www.biostars.org/p/119295/#119462).
+or vice versa, rename bam files into files with the prefix 'chr'
+```
+for file in *.bam
+do
+    filename=`echo $file | cut -d "." -f 1`
+    samtools view -H $file | sed -e 's/SN:\([0-9XY]\)/SN:chr\1/' -e 's/SN:MT/SN:chrM/' | samtools reheader - $file > ${filename}_chr.bam
+done
+```
+Reference or more details: [Here](https://www.biostars.org/p/119295/) and [Here](https://www.biostars.org/p/13462/) from Biostars.
+
 
 ## :rabbit: 
 
