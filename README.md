@@ -1,8 +1,5 @@
 # Remind me of some useful commands
 
-Tools might be used:
-- [Samtools](https://www.htslib.org/doc/samtools-depth.html)
-
 
 ## :hamster: Calculate sequencing depth of bam file
 
@@ -50,10 +47,22 @@ done
 Reference or more details: [Here](https://www.biostars.org/p/119295/) and [Here](https://www.biostars.org/p/13462/) from Biostars.
 
 
-## :rabbit: 
+## :rabbit: Downsampling bam file
+```shell
+samtools view -bs 99.2 input.bam > output.bam
+```
+where 99.2 represent sampling 20% of input bam file with seed 99.
+
+
+## :dragon_face:
+
 
 
 ## Trivia
+
+Tools might be used:
+- [Samtools](https://www.htslib.org/doc/samtools-depth.html)
+
 
 Emojis before each sub-section are planned to be arranged in the following order:
 
